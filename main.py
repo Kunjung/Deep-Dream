@@ -1,7 +1,8 @@
 import subprocess
+import os
 
 # Image files stored in img folder
-image_filename_list = [
+direct_image_filename_list = [
     # 'honeyandclover.jpg',
     # 'idinvaded.jpg',
     # 'night.png',
@@ -10,6 +11,14 @@ image_filename_list = [
     'telescope.jpg',
     'weather.jpg',
 ]
+
+image_filename_list = os.listdir('img')  # lists all filenames present in img
+# filter only .png and .jpg image files
+image_filename_list = [filename for filename in image_filename_list if (filename.endswith('.jpg') or filename.endswith('.png'))]
+
+if len(image_filename_list) > 15:
+    ## likely got some unnecessary files, remove and reset to direct_image_filename_list
+    image_filename_list = direct_image_filename_list
 
 
 for image_filename in image_filename_list:
