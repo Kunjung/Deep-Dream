@@ -6,3 +6,9 @@ https://keras.io/examples/deep_dream/
 ----------------------------
 python main.py
 ----------------------------
+
+### To convert single image, use
+
+----------------------------------------------------------------------
+python deep_dream.py img/honeyandclover.jpg result/honeyandclover
+----------------------------------------------------------------------

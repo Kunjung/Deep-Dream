@@ -22,7 +22,7 @@ if len(image_filename_list) > 15:
 
 
 for image_filename in image_filename_list:
-    output_name = image_filename.split('.')[0] + '.png'
+    output_name = image_filename.split('.')[0]
     script_name = 'deep_dream.py'
     print('image_filename', image_filename)
     print('output_name', output_name)
